@@ -1,0 +1,20 @@
+server:
+  port: 8060
+#  servletPath: /
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    enabled: true
+    instance:
+      lease-renewal-interval-in-seconds: 1
+      lease-expiration-duration-in-seconds: 3
+ # instance:
+  #  healthCheckUrlPath: ${server.servletPath}/health
+  #  statusPageUrlPath: ${server.servletPath}/info
+  #  homePageUrl: ${server.servletPath}/
+    healthcheck:
+      enabled: true
+spring:
+  application:
+    name: eureka-hello
